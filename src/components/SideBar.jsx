@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import "animate.css";
 
 /* eslint-disable react/prop-types */
 export default function SideBar({

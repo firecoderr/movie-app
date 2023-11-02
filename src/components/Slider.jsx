@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "animate.css";
 
 import spider from "../assets/spider.jpg";
 import batman from "../assets/batman.jpg";
