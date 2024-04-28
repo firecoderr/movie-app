@@ -62,7 +62,7 @@ export default function SignUp() {
 
       setTimeout(() => {
         clearNav();
-        navigate("/");
+        navigate("/movie-app");
       }, 1);
     }
   };
@@ -78,7 +78,7 @@ export default function SignUp() {
       if (users[i].username === loginUser && users[i].password === loginPass) {
         setTimeout(() => {
           clearNav();
-          navigate("/");
+          navigate("/movie-app");
         }, 1);
         return setLogin([users[i]]);
       }
@@ -103,7 +103,7 @@ export default function SignUp() {
     <>
       <div className="sign-up" style={style}>
         <div
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/movie-app")}
           style={{
             margin: "20px 0 50px 0",
             fontSize: "2rem",
