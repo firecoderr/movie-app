@@ -3,7 +3,7 @@ import App from "./App.jsx";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <HashRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );
