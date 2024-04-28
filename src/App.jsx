@@ -100,7 +100,7 @@ export default function App() {
           }
         />
         <Route
-          path="/movie-app"
+          path=""
           element={
             <About
               scrollToList={scrollToList}
