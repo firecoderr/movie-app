@@ -10,7 +10,7 @@ import MovieDetails from "./pages/MovieDetails";
 import SignUp from "./pages/SignUp";
 
 // API key: aab61b74
-const API_URL = "http://www.omdbapi.com?apikey=aab61b74";
+const API_URL = "https://www.omdbapi.com?apikey=aab61b74";
 
 // const movies = [{ Title: "batman" }, { Title: "superman" }];
 
