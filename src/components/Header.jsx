@@ -35,7 +35,7 @@ export default function Header({
 
           <a
             onClick={() => {
-              navigate("/movie-app");
+              navigate("/");
               window.scrollTo(0, 0);
               setMovieName("Avengers");
               searchMovies("Avengers");

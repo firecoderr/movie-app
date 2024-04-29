@@ -7,7 +7,7 @@ import Footer from "./Footer";
 export default function MovieDetail({ detail, loading }) {
   const [fav, setFav] = useState(false);
 
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useState([""]);
 
   const [getUsers, setGetUsers] = useState(
     JSON.parse(localStorage.getItem("USERS")) || []
