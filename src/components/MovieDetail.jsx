@@ -16,15 +16,15 @@ export default function MovieDetail({ detail, loading }) {
 
   // currentFavList
   const index = getUsers.findIndex(
-    (item) => item.username === (currentLog ? currentLog[0].username : false)
+    (item) => item?.username === (currentLog ? currentLog[0]?.username : false)
   );
-  const currentFavList = currentLog ? getUsers[index].favourites : [];
+  const currentFavList = currentLog?.length ? getUsers[index]?.favourites : [];
 
   //  UseEffect
   useEffect(() => {
     localStorage.setItem("USERS", JSON.stringify(getUsers));
     localStorage.setItem("LOGIN", JSON.stringify(currentLog));
-    currentFavList.some((item) => item.imdbID === detail.imdbID)
+    currentFavList?.some((item) => item.imdbID === detail.imdbID)
       ? setFav(true)
       : setFav(false);
   }, [getUsers, currentLog, favourites, fav]);
@@ -32,20 +32,23 @@ export default function MovieDetail({ detail, loading }) {
   // Add to Favourites Function
   const addToFavourites = () => {
     // add to favourites
-    if (!currentFavList.some((item) => item.imdbID === detail.imdbID)) {
-      setFavourites(currentFavList.push(detail));
+    if (!currentFavList?.some((item) => item.imdbID === detail.imdbID)) {
+      setFavourites(currentFavList?.push(detail));
     } else {
       // remove from the favourites
-      if (currentFavList.some((item) => item.imdbID === detail.imdbID)) {
+      if (currentFavList?.some((item) => item.imdbID === detail.imdbID)) {
         const thisMovie = currentFavList.findIndex(
           (item) => item.imdbID === detail.imdbID
         );
-        setFavourites(currentFavList.splice(thisMovie, 1));
+        setFavourites(currentFavList?.splice(thisMovie, 1));
       }
     }
 
-    console.log(currentFavList.some((item) => item.Title === detail.Title));
-    console.log(currentFavList.length);
+    // console.log("currentFavList", currentFavList);
+    // console.log("currentLog", currentLog);
+
+    // console.log(currentFavList?.some((item) => item.Title === detail.Title));
+    // console.log(currentFavList?.length);
   };
 
   return (
@@ -79,7 +82,7 @@ export default function MovieDetail({ detail, loading }) {
                   <i
                     style={fav ? { color: "orange" } : { color: "black" }}
                     onClick={
-                      currentLog
+                      currentLog?.length
                         ? addToFavourites
                         : () => window.alert("For that you have to login!")
                     }

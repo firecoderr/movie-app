@@ -36,6 +36,8 @@ export default function MyFavourites({
       />
       <h1
         style={{
+          paddingTop: "50px",
+          textAlign: "center",
           fontSize: "1.6rem",
           fontWeight: "500",
           margin: "110px 20px 20px 20px",

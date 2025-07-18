@@ -165,7 +165,7 @@ header.appear {
   position: relative;
 
   width: 100%;
-  max-width: 1450px;
+  /* max-width: 1450px; */
   min-height: 600px;
   max-height: 700px;
   height: 100vh;
